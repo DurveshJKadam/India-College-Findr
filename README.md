@@ -1,29 +1,28 @@
 # India College Finder
 
-A production-ready full-stack web application for discovering colleges across India with comprehensive information including courses, addresses, contact details, and websites.
+A full-stack web application for discovering colleges across India with comprehensive information including courses, addresses, contact details, and websites.
 
 ## Features
 
-- **Advanced Search**: Filter 2,196+ colleges by state, district, and course offerings
+- **Advanced Search**: Filter 2,288 colleges by state, district, and course offerings
 - **Comprehensive Information**: View college name, courses, full address, contact, and website
 - **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices
 - **Real-time Results**: Dynamic search results without page reloads
 - **Modern UI**: Clean, professional interface with gradient design
-- **Production Ready**: Scalable architecture with security best practices
+- **SQLite Database**: Lightweight, zero-configuration database
 
 ## Technology Stack
 
 - **Frontend**: React.js, Modern JavaScript (ES6+), Responsive CSS
 - **Backend**: Node.js, Express.js, RESTful APIs
-- **Database**: MySQL 8.0+ with optimized indexing
+- **Database**: SQLite 3 with optimized indexing
 - **Security**: Input validation, SQL injection protection, rate limiting
 
 ## Quick Start
 
 ### Prerequisites
 - Node.js (v18.0.0+)
-- MySQL 8.0+
-- npm or yarn
+- npm
 
 ### Installation
 
@@ -33,30 +32,32 @@ A production-ready full-stack web application for discovering colleges across In
    cd india-college-finder
    ```
 
-2. **Setup Database**
+2. **Install Dependencies**
    ```bash
-   mysql -u root -p < docs/database-schema.sql
+   npm install
+   cd client && npm install
+   cd ..
    ```
 
 3. **Configure Environment**
    ```bash
    cp .env.example .env
-   # Edit .env with your database credentials
    ```
+   The default configuration uses SQLite (no additional setup needed).
 
-4. **Install Dependencies**
+4. **Import Data**
    ```bash
-   npm install
-   npm run install-client
+   node scripts/import-all-data.js
    ```
 
 5. **Start Development Servers**
    ```bash
    # Terminal 1: Backend
-   npm run dev
+   npm start
    
    # Terminal 2: Frontend
-   npm run client
+   cd client
+   npm start
    ```
 
 6. **Access Application**
@@ -69,37 +70,40 @@ A production-ready full-stack web application for discovering colleges across In
 india-college-finder/
 ├── server.js                 # Main server file
 ├── package.json             # Backend dependencies
-├── .env.example            # Environment template
+├── .env                     # Environment configuration
+├── india_college_finder.db  # SQLite database
 ├── config/
-│   └── database.js         # Database configuration
+│   ├── database.js          # Database configuration
+│   └── database-sqlite.js   # SQLite implementation
 ├── src/
-│   ├── controllers/        # Request handlers
-│   ├── routes/            # API routes
-│   ├── services/          # Business logic
-│   ├── models/            # Database models
-│   └── middleware/        # Custom middleware
-├── client/                # React frontend
+│   ├── controllers/         # Request handlers
+│   ├── routes/             # API routes
+│   ├── services/           # Business logic
+│   ├── models/             # Database models
+│   └── middleware/         # Custom middleware
+├── client/                 # React frontend
 │   ├── src/
-│   │   ├── components/    # React components
-│   │   ├── services/      # API services
-│   │   └── App.jsx        # Main app component
-│   └── package.json       # Frontend dependencies
-├── scripts/               # Data import scripts
-│   ├── import-csv-data.py
-│   └── import-state-data.py
-└── docs/                  # Documentation
-    ├── database-schema.sql
-    ├── setup-instructions.md
-    └── architecture-decisions.md
+│   │   ├── components/     # React components
+│   │   ├── services/       # API services
+│   │   └── App.jsx         # Main app component
+│   └── package.json        # Frontend dependencies
+├── data/                   # CSV data files
+│   ├── 01MH.csv           # Maharashtra colleges
+│   ├── 02UP.csv           # Uttar Pradesh colleges
+│   └── ...                # Other state files
+├── scripts/                # Data import scripts
+│   └── import-all-data.js  # Import all CSV files
+└── docs/                   # Documentation
+    └── *.md               # Various documentation files
 ```
 
 ## Database Information
 
 ### Current Statistics
-- **Total Colleges**: 2,196
+- **Total Colleges**: 2,288
 - **Total States/UTs**: 35
-- **Total Courses**: 8
-- **College-Course Mappings**: 3,000+
+- **Total Courses**: 11
+- **College-Course Mappings**: 4,435
 
 ### Available Courses
 1. Computer Engineering
@@ -110,18 +114,9 @@ india-college-finder/
 6. Management
 7. Electronics
 8. Mechanical
-
-### Top States by College Count
-1. Punjab: 171 colleges
-2. Himachal Pradesh: 100 colleges
-3. Andhra Pradesh: 100 colleges
-4. Telangana: 100 colleges
-5. Assam: 100 colleges
-6. Odisha: 100 colleges
-7. Kerala: 100 colleges
-8. Uttarakhand: 100 colleges
-9. Haryana: 100 colleges
-10. Gujarat: 100 colleges
+9. Civil Engineering
+10. Electrical Engineering
+11. Chemical Engineering
 
 ## API Endpoints
 
@@ -147,55 +142,51 @@ curl "http://localhost:5000/api/search?state=Maharashtra&district=Pune&course=In
 curl "http://localhost:5000/api/search/states"
 ```
 
-## Database Schema
+## Data Import
 
-The application uses a normalized MySQL schema:
+### Adding New Data
 
-### Tables
-- **colleges**: College information (name, state, district, address, contact, website)
-- **courses**: Available courses
-- **college_courses**: Many-to-many relationship mapping
+1. **Add CSV files to the `data/` folder**
+   - Files should have columns: College Name, State, District, Course(s) Offered, Full Address, Contact, Website
 
-### Key Features
-- Indexed columns for fast queries
-- Foreign key constraints for data integrity
-- Optimized JOIN operations
-- Support for complex filtering
+2. **Run the import script**
+   ```bash
+   node scripts/import-all-data.js
+   ```
 
-## Deployment
+3. **Restart the server**
+   ```bash
+   npm start
+   ```
 
-### Production Build
-```bash
-npm run build
-npm start
+### CSV Format
+```csv
+#,College Name,Course(s) Offered,District,Full Address,Contact,Website,State
+1,Example College,"B.Tech (Computer, IT, Electronics)",Mumbai,"123 Street, Mumbai",022-12345678,https://example.edu,Maharashtra
 ```
 
-### Environment Variables
-Required variables in `.env`:
+## Environment Variables
+
+Create a `.env` file with:
+```
+NODE_ENV=development
+PORT=5000
+USE_SQLITE=true
+CORS_ORIGIN=http://localhost:3000
+```
+
+For MySQL instead of SQLite:
 ```
 NODE_ENV=production
 PORT=5000
-DB_HOST=your-db-host
-DB_USER=your-db-user
-DB_PASSWORD=your-db-password
+USE_SQLITE=false
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_password
 DB_NAME=india_college_finder
 DB_PORT=3306
-CORS_ORIGIN=your-frontend-url
+CORS_ORIGIN=http://localhost:3000
 ```
-
-### Docker Deployment
-```bash
-docker build -t india-college-finder .
-docker run -p 5000:5000 --env-file .env india-college-finder
-```
-
-### Cloud Deployment
-Supports deployment on:
-- Heroku
-- AWS (EC2, Elastic Beanstalk)
-- Google Cloud Platform
-- Azure App Service
-- DigitalOcean
 
 ## Security Features
 
@@ -205,40 +196,6 @@ Supports deployment on:
 - CORS configuration for cross-origin requests
 - Security headers via Helmet.js
 - Environment-based configuration
-- No sensitive data in codebase
-
-## Performance Optimizations
-
-- Database indexing for fast queries
-- Connection pooling for concurrent requests
-- Response compression with gzip
-- Efficient JOIN queries with proper indexing
-- Frontend state optimization
-- Lazy loading for large result sets
-
-## Data Import
-
-### Import Scripts
-The project includes Python scripts for importing college data:
-
-- `scripts/import-csv-data.py` - Import all states at once
-- `scripts/import-state-data.py` - Import specific states
-
-### Import Process
-1. CSV files contain college data with fields:
-   - College Name
-   - State
-   - District
-   - Full Address
-   - Contact
-   - Website
-   - Courses Offered
-
-2. Scripts automatically:
-   - Parse CSV data
-   - Extract and normalize course information
-   - Insert into database with proper relationships
-   - Handle duplicates gracefully
 
 ## User Interface
 
@@ -254,14 +211,12 @@ The project includes Python scripts for importing college data:
 - Clickable website links (open in new tab)
 - Mobile-optimized with horizontal scroll
 - Loading states and error handling
-- Empty state messages
 
 ### Design
 - Modern gradient color scheme (purple/blue)
 - Clean, professional layout
 - Hover effects on interactive elements
 - Responsive breakpoints for all screen sizes
-- Accessible design patterns
 
 ## Browser Compatibility
 
@@ -271,51 +226,16 @@ Tested and working on:
 - Safari (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
-## Development
-
-### Running Tests
-```bash
-# Backend tests
-npm test
-
-# Frontend tests
-cd client && npm test
-```
-
-### Code Quality
-- ESLint for code linting
-- Prettier for code formatting
-- Input validation on all endpoints
-- Error handling middleware
-- Structured logging
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## Documentation
-
-- [Setup Instructions](docs/setup-instructions.md) - Detailed setup guide
-- [Architecture Decisions](docs/architecture-decisions.md) - Technical architecture
-- [Database Schema](docs/database-schema.sql) - Complete database structure
-- [API Documentation](docs/api-documentation.md) - API reference
-
 ## Troubleshooting
 
 ### Common Issues
 
-**Database Connection Failed**
-- Check MySQL service is running
-- Verify credentials in `.env` file
-- Ensure database exists and schema is imported
-
 **Port Already in Use**
 - Change PORT in `.env` file
-- Kill existing processes on ports 3000 or 5000
+- Kill existing processes: `npx kill-port 5000 3000`
+
+**Database Not Found**
+- Run the import script: `node scripts/import-all-data.js`
 
 **CORS Issues**
 - Update CORS_ORIGIN in `.env`
@@ -325,13 +245,6 @@ cd client && npm test
 - Clear npm cache: `npm cache clean --force`
 - Delete node_modules and reinstall: `rm -rf node_modules && npm install`
 
-## Performance Metrics
-
-- API Response Time: < 100ms (average)
-- Database Query Time: < 50ms (indexed queries)
-- Frontend Load Time: < 2s (production build)
-- Concurrent Users: Supports 100+ simultaneous connections
-
 ## License
 
 This project is licensed under the MIT License.
@@ -339,22 +252,10 @@ This project is licensed under the MIT License.
 ## Support
 
 For issues and questions:
-1. Check the [setup instructions](docs/setup-instructions.md)
-2. Review the troubleshooting section above
-3. Check existing issues on GitHub
-4. Open a new issue with detailed information
-
-## Acknowledgments
-
-- Data sourced from official college websites and government databases
-- Built with modern web technologies and best practices
-- Designed for scalability and production use
-
-## Version History
-
-- **v2.0** - Updated UI with complete information display, removed chatbot
-- **v1.0** - Initial release with search functionality and chatbot
+1. Check the troubleshooting section above
+2. Review the LAUNCH-GUIDE.md
+3. Open an issue with detailed information
 
 ---
 
-**India College Finder** - Empowering students to discover their ideal educational institutions across India.
+**India College Finder** - Discover educational institutions across India.

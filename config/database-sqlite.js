@@ -24,6 +24,9 @@ class Database {
         college_name TEXT NOT NULL,
         state TEXT NOT NULL,
         district TEXT NOT NULL,
+        full_address TEXT,
+        contact TEXT,
+        website TEXT,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
       );

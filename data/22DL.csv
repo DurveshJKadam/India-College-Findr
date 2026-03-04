@@ -1,0 +1,101 @@
+#,College Name,Course(s) Offered,District,Full Address,Contact,Website,State
+1,Indian Institute of Technology Delhi,B.Tech,New Delhi,"Hauz Khas, New Delhi, Delhi 110016",011-26597135 | registrar@admin.iitd.ac.in,https://home.iitd.ac.in/,Delhi
+2,Delhi Technological University,B.Tech,North West Delhi,"Shahbad Daulatpur, Main Bawana Road, Delhi 110042",011-27871018 | registrar@dtu.ac.in,https://dtu.ac.in/,Delhi
+3,Netaji Subhas University of Technology,B.Tech,East Delhi,"Azad Hind Fauj Marg, Sector 3, Dwarka, Delhi 110078",011-25000268 | registrar@nsut.ac.in,https://www.nsut.ac.in/,Delhi
+4,Indraprastha Institute of Information Technology Delhi,B.Tech,South Delhi,"Okhla Industrial Estate, Phase III, New Delhi, Delhi 110020",011-26907400 | registrar@iiitd.ac.in,https://www.iiitd.ac.in/,Delhi
+5,Indira Gandhi Delhi Technical University for Women,B.Tech,Central Delhi,"Madrasa Road, Opposite St. James Church, Kashmere Gate, Delhi 110006",011-23900261 | registrar@igdtuw.ac.in,https://www.igdtuw.ac.in/,Delhi
+6,Jamia Millia Islamia,B.Tech,South East Delhi,"Jamia Nagar, New Delhi, Delhi 110025",011-26981717 | registrar@jmi.ac.in,https://www.jmi.ac.in/,Delhi
+7,Jamia Hamdard,B.Tech,South Delhi,"Hamdard Nagar, New Delhi, Delhi 110062",011-26059688 | registrar@jamiahamdard.ac.in,https://jamiahamdard.edu/,Delhi
+8,Guru Gobind Singh Indraprastha University,B.Tech,South West Delhi,"Sector 16 C, Dwarka, Delhi 110078",011-25302167 | registrar@ipu.ac.in,https://www.ipu.ac.in/,Delhi
+9,Guru Tegh Bahadur Institute of Technology,B.Tech,West Delhi,"G-8 Area, Rajouri Garden, Delhi 110064",011-45582000 | gtbitdirector@gmail.com,https://www.gtbit.org/,Delhi
+10,HMR Institute of Technology & Management,B.Tech,North Delhi,"Plot No. 326, Hamidpur, Delhi 110036",011-27724118 | info@hmritm.ac.in,https://www.hmritm.ac.in/,Delhi
+11,Maharaja Agrasen Institute of Technology,B.Tech,West Delhi,"PSP Area, Plot No. 1, Sector 22, Rohini, Delhi 110086",011-65647742 | mait@mait.ac.in,https://www.mait.ac.in/,Delhi
+12,Maharaja Surajmal Institute of Technology,B.Tech,West Delhi,"C-4, Janakpuri, Delhi 110058",011-25528117 | msit@msit.in,https://www.msit.in/,Delhi
+13,Bharati Vidyapeeth's College of Engineering,B.Tech,West Delhi,"A-4, Paschim Vihar, Rohtak Road, Delhi 110063",011-25278444 | principal@bvcoend.ac.in,https://bvcoend.ac.in/,Delhi
+14,Northern India Engineering College,B.Tech,North Delhi,"FC-26, Shastri Park, Delhi 110053",011-32526211 | director@niecdelhi.ac.in,https://www.niecdelhi.ac.in/,Delhi
+15,Ambedkar Institute of Advanced Communication Technologies and Research,B.Tech,East Delhi,"Geeta Colony, Delhi 110031",011-22048047 | principal@aiactr.ac.in,https://www.aiactr.ac.in/,Delhi
+16,Bhagwan Parshuram Institute of Technology,B.Tech,North Delhi,"PSP-4, Dr. K.N. Katju Marg, Sector 17 Rohini, Delhi 110089",011-27574637 | bpitindia@yahoo.com,https://www.bpitindia.com/,Delhi
+17,Mahavir Swami Institute of Technology,B.Tech,Sonepat,"Jagdishpur, Near O.P. Jindal University, Sonepat, Haryana 131030",0130-2325601 | info@msitsnp.org,https://msit.in/,Delhi
+18,Delhi Institute of Tool Engineering,B.Tech,East Delhi,"Wazirpur Industrial Area, Delhi 110052",011-27377431 | dite@yahoo.com,https://dite.delhigovt.nic.in/,Delhi
+19,Amity School of Engineering & Technology Delhi,B.Tech,New Delhi,"580, Delhi Palam Vihar Road, Bijwasan, Delhi 110061",011-28062106 | info@amity.edu,https://www.amity.edu/asetdelhi/,Delhi
+20,GB Pant Government Engineering College,B.Tech,East Delhi,"Okhla Industrial Estate, Phase III, New Delhi, Delhi 110020",011-26382314 | principal@gbpec.edu.in,https://www.gbpec.edu.in/,Delhi
+21,Delhi Technological University,MBA,North West Delhi,"Shahbad Daulatpur, Main Bawana Road, Delhi 110042",011-27871018 | registrar@dtu.ac.in,https://dtu.ac.in/,Delhi
+22,Netaji Subhas University of Technology,MBA,East Delhi,"Azad Hind Fauj Marg, Sector 3, Dwarka, Delhi 110078",011-25000268 | registrar@nsut.ac.in,https://www.nsut.ac.in/,Delhi
+23,Faculty of Management Studies Delhi,MBA,North Delhi,"Malka Ganj Road, Kamla Nehru Ridge, Civil Lines, Delhi 110007",011-27666382 | registrar@fms.edu,https://www.fms.edu/,Delhi
+24,International Management Institute New Delhi,PGDM,South Delhi,"B-10, Qutab Institutional Area, Tara Crescent, New Delhi, Delhi 110016",011-47194100 | imiinfo@imi.edu,https://www.imi.edu/,Delhi
+25,Fore School of Management,PGDM,South Delhi,"B-18, Qutab Institutional Area, New Delhi, Delhi 110016",011-41242424 | admissions@fsm.ac.in,https://www.fsm.ac.in/,Delhi
+26,Lal Bahadur Shastri Institute of Management,PGDM,North West Delhi,"Plot No 11/7, Dwarka Sector 11, Near Metro Station, Delhi 110075",011-25307700 | admission@lbsim.ac.in,https://www.lbsim.ac.in/,Delhi
+27,Lalita Devi Institute of Management and Sciences,MBA,New Delhi,"847-848, Mandi Road, Mandi Village, Delhi 110047",011-26651112 | info@ldims.org,https://www.ldims.org/,Delhi
+28,Jagan Institute of Management Studies Rohini,PGDM,North West Delhi,"3, Institutional Area, Sector 5, Rohini, Delhi 110085",011-45184000 | admissions@jimsindia.org,https://www.jimsindia.org/,Delhi
+29,Bharatiya Vidya Bhavan's Usha & Lakshmi Mittal Institute of Management,PGDM,New Delhi,"Copernicus Lane, Kasturba Gandhi Marg, Delhi 110001",011-23073476 | info@bulmim.ac.in,https://www.bulmim.ac.in/,Delhi
+30,Sri Sharada Institute of Indian Management Research,PGDM,South West Delhi,"Plot No 7, Phase II, Institutional Area, Vasant Kunj, Delhi 110070",011-26124090 | admissions@sriim.org,https://www.srisiim.ac.in/,Delhi
+31,Fortune Institute of International Business,PGDM,South Delhi,"Plot No 5, Rao Tula Ram Marg, Vasant Vihar, Delhi 110057",011-47285000 | fiib@fiib.edu.in,https://www.fiib.edu.in/,Delhi
+32,Asia Pacific Institute of Management,PGDM,South Delhi,"3 & 4, Institutional Area, Jasola, Sarita Vihar, Delhi 110025",011-42094800 | admissions@asiapacific.edu,https://www.asiapacific.edu/,Delhi
+33,New Delhi Institute of Management,PGDM,South Delhi,"60 & 50(B&C), Behind Batra Hospital, Tughlakabad Institutional Area, Delhi 110062",011-40111000 | admissions@ndimdelhi.org,https://www.ndimdelhi.org/,Delhi
+34,IMM FOSTIIMA Business School,PGDM,South Delhi,"Plot No B 1, Sector 8, Dwarka, Delhi 110077",011-46126000 | info@immfbs.com,https://immfbs.com/,Delhi
+35,Jagannath International Management School Vasant Kunj,PGDM,South Delhi,"OCF Pocket 9, Sector B, Vasant Kunj, Delhi 110070",011-40619300 | admission@jimsd.org,https://www.jimsd.org/,Delhi
+36,Apeejay School of Management,PGDM,South West Delhi,"Sector 8, Institutional Area, Dwarka, Delhi 110077",011-25363979 | asm.admissions@apeejay.edu,https://www.apeejay.edu/asm/,Delhi
+37,Bharatiya Vidya Bhavan Institute of Management Science,PGDM,South Delhi,"Kasturba Gandhi Marg, Delhi 110001",011-23354939 | info@bvbdelhi.org,https://www.bvbdelhi.org/,Delhi
+38,Entrepreneurship & Management Processes International,PGDM,South Delhi,"Camp P.O., CSKM Educational Complex, Satbari, Chattarpur, Delhi 110074",011-26801957 | admissions@empi.in,https://empi.ac.in/,Delhi
+39,Sri Sharada Institute of Indian Management Research,PGDM,South West Delhi,"Plot No 7, Phase II, Institutional Area, Vasant Kunj, Delhi 110070",011-26124090 | admissions@sriim.org,https://www.srisiim.ac.in/,Delhi
+40,Delhi School of Business,PGDM,North West Delhi,"Outer Ring Road, AU Block, Pitampura, Delhi 110034",011-27031111 | admissions@dsb.edu.in,https://www.dsb.edu.in/,Delhi
+41,Delhi Institute of Advanced Studies,MBA,North Delhi,"Plot No 6, Sector-25, Rohini, Delhi 110085",011-27932742 | dias@dias.ac.in,https://www.dias.ac.in/,Delhi
+42,Army Institute of Management & Technology,MBA,Gautam Buddha Nagar,"Plot No M-1, Pocket P-5, Greater Noida, Uttar Pradesh 201306",0120-2343501 | director@aimt.ac.in,https://www.aimt.ac.in/,Delhi
+43,Jagan Institute of Management Studies Technical Campus,PGDM,North West Delhi,"3, Institutional Area, Sector 5, Rohini, Delhi 110085",011-45184000 | admissions@jimsindia.org,https://www.jimsindia.org/,Delhi
+44,Sri Sukhmani Institute of Management,PGDM,South West Delhi,"Plot No. 2, Sector 8, Dwarka, Delhi 110077",011-25364888 | info@ssimdelhi.org,https://www.ssimdelhi.org/,Delhi
+45,"Jagannath Institute of Management Sciences Sector-3, Rohini",PGDM,North West Delhi,"Community Centre, Sector-3, Rohini, Delhi 110085",011-45184100 | admissions@jimsrohini.org,https://www.jimsrohini.org/,Delhi
+46,Maharaja Surajmal Institute,MBA,West Delhi,"C-4, Janak Puri, Delhi 110058",011-25528116 | msi@msijanakpuri.com,https://www.msijanakpuri.com/,Delhi
+47,Army Institute of Management & Technology,MBA,Gautam Buddha Nagar,"Plot No M-1, Pocket P-5, Greater Noida, Uttar Pradesh 201306",0120-2343501 | director@aimt.ac.in,https://www.aimt.ac.in/,Delhi
+48,Jagan Institute of Management Studies Technical Campus,PGDM,North West Delhi,"3, Institutional Area, Sector 5, Rohini, Delhi 110085",011-45184000 | admissions@jimsindia.org,https://www.jimsindia.org/,Delhi
+49,Sri Sukhmani Institute of Management,PGDM,South West Delhi,"Plot No. 2, Sector 8, Dwarka, Delhi 110077",011-25364888 | info@ssimdelhi.org,https://www.ssimdelhi.org/,Delhi
+50,"Jagannath Institute of Management Sciences Sector-3, Rohini",PGDM,North West Delhi,"Community Centre, Sector-3, Rohini, Delhi 110085",011-45184100 | admissions@jimsrohini.org,https://www.jimsrohini.org/,Delhi
+51,Maharaja Surajmal Institute,MBA,West Delhi,"C-4, Janak Puri, Delhi 110058",011-25528116 | msi@msijanakpuri.com,https://www.msijanakpuri.com/,Delhi
+52,Maharaja Surajmal Institute of Technology,B.Tech,West Delhi,"C-4, Janak Puri, Delhi 110058",011-25528117 | msit@msit.in,https://www.msit.in/,Delhi
+53,Bharati Vidyapeeth's Institute of Computer Applications and Management,MBA,West Delhi,"A-4, Paschim Vihar, Rohtak Road, Delhi 110063",011-25284396 | director@bvicam.ac.in,https://www.bvicam.in/,Delhi
+54,Comm-IT Career Academy,MBA,South Delhi,"FC-18, Institutional Area, Guru Gobind Singh Indraprastha University, Sector - 16C, Dwarka, Delhi 110078",011-25302560 | comm-it@ipu.ac.in,Not Available (after search),Delhi
+55,Delhi School of Professional Studies and Research,MBA,East Delhi,"9, Institutional Area, Sector-25, Rohini, Delhi 110085",011-27932799 | info@dspsr.in,https://www.dspsr.in/,Delhi
+56,Delhi Institute of Advanced Studies,MBA,North Delhi,"Plot No 6, Sector-25, Rohini, Delhi 110085",011-27932742 | dias@dias.ac.in,https://www.dias.ac.in/,Delhi
+57,Ideal Institute of Management and Technology,MBA,East Delhi,"16 X, Karkardooma Institutional Area, Near Telephone Exchange, Delhi 110092",011-22372639 | ideal_institute2@rediffmail.com,https://www.idealinstitute.edu.in/,Delhi
+58,Institute of Information Technology & Management,MBA,West Delhi,"D-29, Institutional Area, Janak Puri, Delhi 110058",011-28525882 | director@iitmjanakpuri.com,https://www.iitmjanakpuri.com/,Delhi
+59,Jagannath Institute of Management Sciences Vikas Puri,PGDM,West Delhi,"Community Centre, Vikas Puri, Delhi 110018",011-45184150 | admissions@jimsd.org,https://www.jimsd.org/,Delhi
+60,Kamal Institute of Higher Education & Advance Technology,MBA,West Delhi,"K-1 (Block) Mohan Garden, Near Nawada Metro Station, Delhi 110059",011-25355301 | info@kiheat.ac.in,https://www.kiheat.ac.in/,Delhi
+61,Lingaya's Lalita Devi Institute of Management & Sciences,MBA,New Delhi,"847-848, Mandi Road, Mandi Village, Delhi 110047",011-26651112 | info@lldims.org.in,https://www.lldims.org.in/,Delhi
+62,Maharaja Surajmal Institute,MBA,West Delhi,"C-4, Janak Puri, Delhi 110058",011-25528116 | msi@msijanakpuri.com,https://www.msijanakpuri.com/,Delhi
+63,Management Education & Research Institute,MBA,West Delhi,"53-54, Institutional Area, Janak Puri, Delhi 110058",011-28522201 | meribs@meri.edu.in,https://www.meri.edu.in/,Delhi
+64,New Delhi Institute of Management,PGDM,South Delhi,"60 & 50(B&C), Behind Batra Hospital, Tughlakabad Institutional Area, Delhi 110062",011-40111000 | admissions@ndimdelhi.org,https://www.ndimdelhi.org/,Delhi
+65,Periyar Management and Computer College,MBA,South Delhi,"1 & 2 Institutional Area, Jasola, Sarita Vihar, Delhi 110025",011-29955100 | info@pmccdelhi.com,https://www.pmccdelhi.com/,Delhi
+66,R.C. Institute of Technology,MBA,East Delhi,"Gopal Nagar, Najafgarh, Delhi 110043",011-28015971 | rcitnd@rcitindia.org.in,https://www.rcitindia.org.in/,Delhi
+67,"School of Computer and Systems Sciences, Jawaharlal Nehru University",B.Tech,New Delhi,"New Mehrauli Road, Delhi 110067",011-26742575 | dean_scss@mail.jnu.ac.in,https://www.jnu.ac.in/scss,Delhi
+68,Sirifort Institute of Management Studies,MBA,North West Delhi,"Plot No 8, Sector 25, Rohini, Delhi 110085",011-27061404 | info@simsrohini.edu,https://www.simsrohini.edu/,Delhi
+69,Sri Sharada Institute of Indian Management Research,PGDM,South West Delhi,"Plot No 7, Phase II, Institutional Area, Vasant Kunj, Delhi 110070",011-26124090 | admissions@sriim.org,https://www.srisiim.ac.in/,Delhi
+70,State Council of Educational Research and Training,MBA,Central Delhi,"Varun Marg, Defence Colony, Delhi 110024",011-24331356 | scert@nic.in,https://scertdelhi.nic.in/,Delhi
+71,Army Institute of Management & Technology,MBA,Gautam Buddha Nagar,"Plot No M-1, Pocket P-5, Greater Noida, Uttar Pradesh 201306",0120-2343501 | director@aimt.ac.in,https://www.aimt.ac.in/,Delhi
+72,Jagan Institute of Management Studies Technical Campus,PGDM,North West Delhi,"3, Institutional Area, Sector 5, Rohini, Delhi 110085",011-45184000 | admissions@jimsindia.org,https://www.jimsindia.org/,Delhi
+73,Sri Sukhmani Institute of Management,PGDM,South West Delhi,"Plot No. 2, Sector 8, Dwarka, Delhi 110077",011-25364888 | info@ssimdelhi.org,https://www.ssimdelhi.org/,Delhi
+74,"Jagannath Institute of Management Sciences Sector-3, Rohini",PGDM,North West Delhi,"Community Centre, Sector-3, Rohini, Delhi 110085",011-45184100 | admissions@jimsrohini.org,https://www.jimsrohini.org/,Delhi
+75,Maharaja Surajmal Institute,MBA,West Delhi,"C-4, Janak Puri, Delhi 110058",011-25528116 | msi@msijanakpuri.com,https://www.msijanakpuri.com/,Delhi
+76,Maharaja Surajmal Institute of Technology,B.Tech,West Delhi,"C-4, Janak Puri, Delhi 110058",011-25528117 | msit@msit.in,https://www.msit.in/,Delhi
+77,Bharatiya Vidya Bhavan's Usha & Lakshmi Mittal Institute of Management,PGDM,New Delhi,"Copernicus Lane, Kasturba Gandhi Marg, Delhi 110001",011-23354939 | info@bulmim.ac.in,https://www.bulmim.ac.in/,Delhi
+78,Entrepreneurship & Management Processes International,PGDM,South Delhi,"Camp P.O., CSKM Educational Complex, Satbari, Chattarpur, Delhi 110074",011-26801957 | admissions@empi.in,https://empi.ac.in/,Delhi
+79,Sri Sharada Institute of Indian Management Research,PGDM,South West Delhi,"Plot No 7, Phase II, Institutional Area, Vasant Kunj, Delhi 110070",011-26124090 | admissions@sriim.org,https://www.srisiim.ac.in/,Delhi
+80,Delhi School of Business,PGDM,North West Delhi,"Outer Ring Road, AU Block, Pitampura, Delhi 110034",011-27031111 | admissions@dsb.edu.in,https://www.dsb.edu.in/,Delhi
+81,Delhi Institute of Advanced Studies,MBA,North Delhi,"Plot No 6, Sector-25, Rohini, Delhi 110085",011-27932742 | dias@dias.ac.in,https://www.dias.ac.in/,Delhi
+82,Ideal Institute of Management and Technology,MBA,East Delhi,"16 X, Karkardooma Institutional Area, Near Telephone Exchange, Delhi 110092",011-22372639 | ideal_institute2@rediffmail.com,https://www.idealinstitute.edu.in/,Delhi
+83,Institute of Information Technology & Management,MBA,West Delhi,"D-29, Institutional Area, Janak Puri, Delhi 110058",011-28525882 | director@iitmjanakpuri.com,https://www.iitmjanakpuri.com/,Delhi
+84,Jagannath Institute of Management Sciences Vikas Puri,PGDM,West Delhi,"Community Centre, Vikas Puri, Delhi 110018",011-45184150 | admissions@jimsd.org,https://www.jimsd.org/,Delhi
+85,Kamal Institute of Higher Education & Advance Technology,MBA,West Delhi,"K-1 (Block) Mohan Garden, Near Nawada Metro Station, Delhi 110059",011-25355301 | info@kiheat.ac.in,https://www.kiheat.ac.in/,Delhi
+86,Lingaya's Lalita Devi Institute of Management & Sciences,MBA,New Delhi,"847-848, Mandi Road, Mandi Village, Delhi 110047",011-26651112 | info@lldims.org.in,https://www.lldims.org.in/,Delhi
+87,Maharaja Surajmal Institute,MBA,West Delhi,"C-4, Janak Puri, Delhi 110058",011-25528116 | msi@msijanakpuri.com,https://www.msijanakpuri.com/,Delhi
+88,Management Education & Research Institute,MBA,West Delhi,"53-54, Institutional Area, Janak Puri, Delhi 110058",011-28522201 | meribs@meri.edu.in,https://www.meri.edu.in/,Delhi
+89,New Delhi Institute of Management,PGDM,South Delhi,"60 & 50(B&C), Behind Batra Hospital, Tughlakabad Institutional Area, Delhi 110062",011-40111000 | admissions@ndimdelhi.org,https://www.ndimdelhi.org/,Delhi
+90,Periyar Management and Computer College,MBA,South Delhi,"1 & 2 Institutional Area, Jasola, Sarita Vihar, Delhi 110025",011-29955100 | info@pmccdelhi.com,https://www.pmccdelhi.com/,Delhi
+91,R.C. Institute of Technology,MBA,East Delhi,"Gopal Nagar, Najafgarh, Delhi 110043",011-28015971 | rcitnd@rcitindia.org.in,https://www.rcitindia.org.in/,Delhi
+92,"School of Computer and Systems Sciences, Jawaharlal Nehru University",B.Tech,New Delhi,"New Mehrauli Road, Delhi 110067",011-26742575 | dean_scss@mail.jnu.ac.in,https://www.jnu.ac.in/scss,Delhi
+93,Sirifort Institute of Management Studies,MBA,North West Delhi,"Plot No 8, Sector 25, Rohini, Delhi 110085",011-27061404 | info@simsrohini.edu,https://www.simsrohini.edu/,Delhi
+94,Sri Sharada Institute of Indian Management Research,PGDM,South West Delhi,"Plot No 7, Phase II, Institutional Area, Vasant Kunj, Delhi 110070",011-26124090 | admissions@sriim.org,https://www.srisiim.ac.in/,Delhi
+95,State Council of Educational Research and Training,MBA,Central Delhi,"Varun Marg, Defence Colony, Delhi 110024",011-24331356 | scert@nic.in,https://scertdelhi.nic.in/,Delhi
+96,Delhi School of Professional Studies and Research,MBA,East Delhi,"9, Institutional Area, Sector-25, Rohini, Delhi 110085",011-27932799 | info@dspsr.in,https://www.dspsr.in/,Delhi
+97,Comm-IT Career Academy,MBA,South Delhi,"FC-18, Institutional Area, Guru Gobind Singh Indraprastha University, Sector - 16C, Dwarka, Delhi 110078",011-25302560 | comm-it@ipu.ac.in,Not Available (after search),Delhi
+98,Delhi Institute of Advanced Studies,MBA,North Delhi,"Plot No 6, Sector-25, Rohini, Delhi 110085",011-27932742 | dias@dias.ac.in,https://www.dias.ac.in/,Delhi
+99,Ideal Institute of Management and Technology,MBA,East Delhi,"16 X, Karkardooma Institutional Area, Near Telephone Exchange, Delhi 110092",011-22372639 | ideal_institute2@rediffmail.com,https://www.idealinstitute.edu.in/,Delhi
+100,Institute of Information Technology & Management,MBA,West Delhi,"D-29, Institutional Area, Janak Puri, Delhi 110058",011-28525882 | director@iitmjanakpuri.com,https://www.iitmjanakpuri.com/,Delhi

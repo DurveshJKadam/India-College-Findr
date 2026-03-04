@@ -12,7 +12,7 @@ class College {
           c.full_address,
           c.contact,
           c.website,
-          GROUP_CONCAT(DISTINCT co.course_name ORDER BY co.course_name ASC SEPARATOR ', ') as courses
+          GROUP_CONCAT(co.course_name, ', ') as courses
         FROM colleges c
         LEFT JOIN college_courses cc ON c.college_id = cc.college_id
         LEFT JOIN courses co ON cc.course_id = co.course_id
