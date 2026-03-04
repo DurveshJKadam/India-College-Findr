@@ -255,12 +255,14 @@ async function importCSVFile(filePath) {
       return resolve();
     }
     
-    const headers = parseCSVLine(lines[0]);
+    // const headers = parseCSVLine(lines[0]);
+    const headers = lines[0].split('\t');
     const data = [];
     
     // Parse all data rows
     for (let i = 1; i < lines.length; i++) {
-      const values = parseCSVLine(lines[i]);
+      // const values = parseCSVLine(lines[i]);
+      const values = lines[i].split('\t');
       const row = {};
       headers.forEach((header, index) => {
         row[header.trim()] = values[index] || '';
