@@ -54,7 +54,7 @@ api.interceptors.response.use(
 // API functions
 export const searchColleges = async (params = {}) => {
   try {
-    const response = await api.get('/search', { params });
+    const response = await api.get('api/search', { params });
     return response;
   } catch (error) {
     throw error;
@@ -63,7 +63,7 @@ export const searchColleges = async (params = {}) => {
 
 export const getStates = async () => {
   try {
-    const response = await api.get('/search/states');
+    const response = await api.get('api/search/states');
     return response;
   } catch (error) {
     throw error;
@@ -73,7 +73,7 @@ export const getStates = async () => {
 export const getDistricts = async (state) => {
   try {
     const params = state && state !== 'All' ? { state } : {};
-    const response = await api.get('/search/districts', { params });
+    const response = await api.get('api/search/districts', { params });
     return response;
   } catch (error) {
     throw error;
@@ -82,7 +82,7 @@ export const getDistricts = async (state) => {
 
 export const getCourses = async () => {
   try {
-    const response = await api.get('/search/courses');
+    const response = await api.get('api/search/courses');
     return response;
   } catch (error) {
     throw error;
