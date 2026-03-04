@@ -12,6 +12,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #f5f7fa;
   min-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 code {
@@ -89,6 +91,14 @@ code {
   background: white;
   transition: all 0.3s ease;
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+  padding-right: 40px;
 }
 
 .filter-group select:hover {
@@ -115,6 +125,9 @@ code {
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-height: 48px;
 }
 
 .search-button:hover {
@@ -167,6 +180,27 @@ code {
   overflow-x: auto;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #667eea #f0f0f0;
+}
+
+.results-table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.results-table-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.results-table-container::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.results-table-container::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
 }
 
 .results-table {
@@ -240,6 +274,11 @@ code {
   font-weight: 500;
   transition: color 0.2s ease;
   word-break: break-all;
+  display: inline-block;
+  padding: 4px 0;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
 }
 
 .college-website:hover {
@@ -303,6 +342,79 @@ code {
   font-weight: 500;
 }
 
+/* Mobile Card View for Results */
+.results-card-view {
+  display: none;
+}
+
+.college-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border-left: 4px solid #667eea;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.college-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.college-card-header {
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.college-card-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.college-card-location {
+  font-size: 0.9rem;
+  color: #6c757d;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.college-card-location span {
+  background: #f8f9fa;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.college-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.college-card-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.college-card-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.college-card-value {
+  font-size: 0.95rem;
+  color: #495057;
+  line-height: 1.5;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .container {
@@ -312,63 +424,122 @@ code {
   .search-section {
     padding: 25px;
   }
+  
+  .results-table {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .search-filters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .filter-group:last-of-type {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 25px 0;
+    margin-bottom: 20px;
+  }
+  
   .header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
   }
   
   .header p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+  
+  .container {
+    padding: 12px;
   }
   
   .search-section {
-    padding: 20px;
+    padding: 20px 15px;
+    border-radius: 10px;
   }
   
   .search-filters {
     grid-template-columns: 1fr;
-    padding: 20px;
+    padding: 18px;
     gap: 15px;
+  }
+  
+  .filter-group label {
+    font-size: 0.9rem;
+  }
+  
+  .filter-group select {
+    padding: 11px 12px;
+    font-size: 0.95rem;
+    min-height: 44px;
+    padding-right: 35px;
+    background-size: 18px;
+  }
+  
+  .search-button {
+    padding: 14px 35px;
+    font-size: 1rem;
   }
   
   .results-header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 12px;
   }
   
   .results-header h2 {
     font-size: 1.5rem;
   }
   
-  .results-table-container {
-    margin: 0 -20px;
-    border-radius: 0;
-  }
-  
-  .results-table th,
-  .results-table td {
-    padding: 12px 10px;
-    font-size: 0.85rem;
-  }
-  
-  .college-name {
+  .results-count {
+    padding: 6px 16px;
     font-size: 0.95rem;
+  }
+  
+  /* Switch to card view on mobile */
+  .results-table-container {
+    display: none;
+  }
+  
+  .results-card-view {
+    display: block;
+  }
+  
+  .no-results {
+    padding: 50px 20px;
+    font-size: 1.1rem;
+  }
+  
+  .no-results-icon {
+    font-size: 3rem;
   }
 }
 
 @media (max-width: 480px) {
   .header {
     padding: 20px 0;
+    margin-bottom: 15px;
   }
   
   .header h1 {
     font-size: 1.5rem;
+    margin-bottom: 6px;
   }
   
   .header p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    padding: 0 15px;
   }
   
   .container {
@@ -376,22 +547,352 @@ code {
   }
   
   .search-section {
-    padding: 15px;
+    padding: 15px 12px;
     border-radius: 8px;
   }
   
   .search-filters {
     padding: 15px;
+    gap: 12px;
+  }
+  
+  .filter-group label {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+  
+  .filter-group select {
+    padding: 10px;
+    font-size: 0.9rem;
+    min-height: 44px;
+    padding-right: 35px;
+    background-size: 16px;
   }
   
   .search-button {
-    padding: 12px 30px;
+    padding: 12px 25px;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .results-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .results-count {
+    padding: 5px 14px;
+    font-size: 0.9rem;
+  }
+  
+  .college-card {
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .college-card-name {
     font-size: 1rem;
   }
   
-  .results-table th,
-  .results-table td {
-    padding: 10px 8px;
+  .college-card-location {
+    font-size: 0.85rem;
+  }
+  
+  .college-card-label {
     font-size: 0.8rem;
+  }
+  
+  .college-card-value {
+    font-size: 0.9rem;
+  }
+  
+  .no-results {
+    padding: 40px 15px;
+    font-size: 1rem;
+  }
+  
+  .loading {
+    padding: 50px 15px;
+    font-size: 1.1rem;
+  }
+  
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border-width: 4px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header h1 {
+    font-size: 1.3rem;
+  }
+  
+  .header p {
+    font-size: 0.8rem;
+  }
+  
+  .search-section {
+    padding: 12px 10px;
+  }
+  
+  .search-filters {
+    padding: 12px;
+  }
+  
+  .search-button {
+    padding: 11px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .college-card {
+    padding: 14px;
+  }
+}
+
+/* Chatbot Styles */
+.chatbot-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  max-height: 80vh;
+}
+
+.chatbot-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 12px 12px 0 0;
+}
+
+.chatbot-header h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.chatbot-header p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.chatbot-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #f8f9fa;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #667eea #f0f0f0;
+}
+
+.chatbot-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatbot-messages::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 3px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
+
+.message {
+  padding: 12px 16px;
+  border-radius: 10px;
+  max-width: 80%;
+  line-height: 1.5;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.message.user {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+  background: white;
+  color: #2c3e50;
+  align-self: flex-start;
+  border: 1px solid #e9ecef;
+  border-bottom-left-radius: 4px;
+}
+
+.chatbot-input {
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #e9ecef;
+  border-radius: 0 0 12px 12px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.input-group button {
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.input-group button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.input-group button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Chatbot Mobile Responsive */
+@media (max-width: 768px) {
+  .chatbot-section {
+    height: 500px;
+    max-height: 70vh;
+    margin-top: 20px;
+  }
+  
+  .chatbot-header {
+    padding: 16px;
+  }
+  
+  .chatbot-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .chatbot-header p {
+    font-size: 0.85rem;
+  }
+  
+  .chatbot-messages {
+    padding: 15px;
+    gap: 12px;
+  }
+  
+  .message {
+    max-width: 85%;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+  
+  .chatbot-input {
+    padding: 15px;
+  }
+  
+  .input-group input {
+    padding: 11px 13px;
+    font-size: 0.95rem;
+  }
+  
+  .input-group button {
+    padding: 11px 24px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatbot-section {
+    height: 450px;
+    max-height: 65vh;
+    border-radius: 10px;
+  }
+  
+  .chatbot-header {
+    padding: 14px;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .chatbot-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .chatbot-header p {
+    font-size: 0.8rem;
+  }
+  
+  .chatbot-messages {
+    padding: 12px;
+    gap: 10px;
+  }
+  
+  .message {
+    max-width: 90%;
+    padding: 9px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .chatbot-input {
+    padding: 12px;
+  }
+  
+  .input-group {
+    gap: 8px;
+  }
+  
+  .input-group input {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .input-group button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .chatbot-section {
+    height: 400px;
+  }
+  
+  .message {
+    max-width: 95%;
+    padding: 8px 11px;
+    font-size: 0.85rem;
+  }
+  
+  .input-group button {
+    padding: 10px 16px;
+    font-size: 0.85rem;
   }
 }

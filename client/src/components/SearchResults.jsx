@@ -46,6 +46,7 @@ const SearchResults = ({ results, loading, hasSearched }) => {
         </span>
       </div>
 
+      {/* Desktop Table View */}
       <div className="results-table-container">
         <table className="results-table">
           <thead>
@@ -100,6 +101,66 @@ const SearchResults = ({ results, loading, hasSearched }) => {
             ))}
           </tbody>
         </table>
+      </div>
+
+      {/* Mobile Card View */}
+      <div className="results-card-view">
+        {results.map((college, index) => (
+          <div key={`${college.college_id}-${index}`} className="college-card">
+            <div className="college-card-header">
+              <div className="college-card-name">{college.college_name}</div>
+              <div className="college-card-location">
+                <span>📍 {college.state}</span>
+                <span>{college.district}</span>
+              </div>
+            </div>
+            
+            <div className="college-card-body">
+              {college.courses && (
+                <div className="college-card-field">
+                  <div className="college-card-label">Courses Offered</div>
+                  <div className="college-card-value college-courses">
+                    {college.courses}
+                  </div>
+                </div>
+              )}
+              
+              {college.full_address && (
+                <div className="college-card-field">
+                  <div className="college-card-label">Address</div>
+                  <div className="college-card-value">
+                    {college.full_address}
+                  </div>
+                </div>
+              )}
+              
+              {college.contact && (
+                <div className="college-card-field">
+                  <div className="college-card-label">Contact</div>
+                  <div className="college-card-value">
+                    {college.contact}
+                  </div>
+                </div>
+              )}
+              
+              {college.website && (
+                <div className="college-card-field">
+                  <div className="college-card-label">Website</div>
+                  <div className="college-card-value">
+                    <a 
+                      href={college.website} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="college-website"
+                    >
+                      Visit Website →
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
